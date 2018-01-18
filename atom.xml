@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Doo-Doo-Doo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://rachelqiu.com/"/>
+  <updated>2018-01-18T16:51:16.000Z</updated>
+  <id>http://rachelqiu.com/</id>
+  
+  <author>
+    <name>Huan555</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日本語テスト</title>
+    <link href="http://rachelqiu.com/2018/01/19/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88/"/>
+    <id>http://rachelqiu.com/2018/01/19/日本語テスト/</id>
+    <published>2018-01-18T16:50:29.000Z</published>
+    <updated>2018-01-18T16:51:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is a Japanese test post.</p><p>私は昨日ついにその助力家というのの上よりするたなけれ。</p><p>最も今をお話団はちょうどこの前後なかろでくらいに困りがいるたをは帰着考えたなかって、そうにもするでうたらない。</p><p>がたを知っないはずも同時に九月をいよいよたありた。</p><p>もっと槙さんにぼんやり金少し説明にえた自分大した人私か影響にというお関係たうませないが、この次第も私か兄具合に使うて、槙さんののに当人のあなたにさぞご意味と行くて私個人が小尊敬を聴いように同時に同反抗に集っだうて、いよいよまず相当へあっうからいだ事をしでなけれ。</p><blockquote><p>それでそれでもご時日をしはずはたったいやと突き抜けるますて、その元がは行ったてという獄を尽すていけですた。</p></blockquote><p>この中道具の日その学校はあなたごろがすまなりかとネルソンさんの考えるですん、辺の事実ないというご盲従ありたですと、爺さんのためが薬缶が結果までの箸の当時してならて、多少の十月にためからそういう上からとにかくしましないと触れべきものたで、ないうですと多少お人達したのでたた。</p><p><em>From <a href="http://lipsum.sugutsukaeru.jp/index.cgi" target="_blank" rel="external">すぐ使えるダミーテキスト - 日本語 Lorem ipsum</a></em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This is a Japanese test post.&lt;/p&gt;
+&lt;p&gt;私は昨日ついにその助力家というのの上よりするたなけれ。&lt;/p&gt;
+&lt;p&gt;最も今をお話団はちょうどこの前後なかろでくらいに困りがいるたをは帰着考えたなかって、そうにもするでうたらない。&lt;/p&gt;
+&lt;p&gt;がた
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>实现垂直居中</title>
+    <link href="http://rachelqiu.com/2017/12/26/%E5%AE%9E%E7%8E%B0%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
+    <id>http://rachelqiu.com/2017/12/26/实现垂直居中/</id>
+    <published>2017-12-26T11:14:05.000Z</published>
+    <updated>2018-01-18T16:54:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-大前提"><a href="#1-大前提" class="headerlink" title="1. 大前提"></a>1. 大前提</h3><p>我们有一个两个block containers, 父子元素的关系，然后我想让子block container的位置垂直居中。可以有的思路是：inline-block || table cell 和 vertical-align 连用， flex, abosulte布局.<br><a id="more"></a></p><h3 id="2-借助vertical-align-middle-这一点来实现"><a href="#2-借助vertical-align-middle-这一点来实现" class="headerlink" title="2. 借助vertical-align: middle 这一点来实现"></a>2. 借助vertical-align: middle 这一点来实现</h3><h4 id="2-1vertical-align的属性介绍"><a href="#2-1vertical-align的属性介绍" class="headerlink" title="2.1vertical-align的属性介绍"></a>2.1vertical-align的属性介绍</h4><p>Vertical-align属性是用来控制inline-level elements、table cell在line box里头的垂直布局情况。</p><h4 id="2-2-借助table-cell-vertical-align来实现"><a href="#2-2-借助table-cell-vertical-align来实现" class="headerlink" title="2.2 借助table cell + vertical-align来实现"></a>2.2 借助table cell + vertical-align来实现</h4><p>通过设置.parent的display为table-cell（所以才能用上vertical-align这个属性)，<br>然后设置.parent的vertical-align 为 middle。【不清楚table-cell 和 inline-level element设置vertical-align：middle的效果有没有不同，因为小火柴的代码里头table-cell的部分是没有设置font-size为0，确实是不用的，两者的实现是不一样的，table-cell的vertical-align是直接使用到自己身上的，这个可能就是个原因。】<br>这样就已经实现.parent里头子元素的垂直居中，但是会因为 .parent 的高度默认由内容撑起来，所以，看不出垂直居中的效果。<br>可以再通过设置一个具体的height值来看出 .child 垂直居中的效果。</p><h5 id="2-2-1-注意"><a href="#2-2-1-注意" class="headerlink" title="2.2.1 注意"></a>2.2.1 注意</h5><p>设置为table-cell的div不能不能不能使用浮动／绝对定位。<br>小火柴点解释是：‘因为浮动或绝对定位会使元素具有块级元素特性，从而丧失了table-cell元素具有的垂直对齐的功能。若需要浮动或绝对定位处理，则需要外面再套一层div。’<br>确实，从自己关于 display, position, float属性关系的笔记中，也可以得出这一点。<br>如果元素被设置成float／绝对定位，那么，它们的display值最终的computed value是根据下面的表来得出的</p><h4 id="2-3-借助-inline-block-vertical-align来实现"><a href="#2-3-借助-inline-block-vertical-align来实现" class="headerlink" title="2.3 借助 inline-block+ vertical-align来实现"></a>2.3 借助 inline-block+ vertical-align来实现</h4><p>因为vertical-align是适用于inline-level element和table-cell的，用来控制inline-level element在line box中的垂直位置[table-cell 的我不清楚]。<br>所以，我们可以通过吧 .parent 调整成一个line-height较大的只有一行的line box[其实只要在 .parent里头放一个inline-block就可以实现这一点]，然后让 inline-block 在.parent 里头的line box中vertical-align: middle就好了。</p><h5 id="2-3-1-ps"><a href="#2-3-1-ps" class="headerlink" title="2.3.1 ps"></a>2.3.1 ps</h5><p>-0- 如果要兼容IE7-的话，￼ IE版的inline-block.<br>-1- 因为vertical-align: middle，这个middle的定位，是会加上父元素的半个X的高度，所以，为了实现理想的垂直居中，需要吧父元素的font-size设置成0.<br>-2- 这个方法也可以用来实现图片在block container中的垂直居中，做法更加简单，不需要设置img的display值，也不需要设置img的line-height.</p><h3 id="3-借助绝对定位来实现"><a href="#3-借助绝对定位来实现" class="headerlink" title="3.借助绝对定位来实现"></a>3.借助绝对定位来实现</h3><h4 id="3-1-熟悉绝对定位下-height-和-margin-的计算方法-non-replaced-element下-。"><a href="#3-1-熟悉绝对定位下-height-和-margin-的计算方法-non-replaced-element下-。" class="headerlink" title="3.1 熟悉绝对定位下 height 和 margin 的计算方法[non-replaced element下]。"></a>3.1 熟悉绝对定位下 height 和 margin 的计算方法[non-replaced element下]。</h4><p>和normal flow的height计算方法非常不一样的，绝对定位的height是和它的width一样，都是有各自的一条公式可以计算的。<br>公式如下：<br>‘Top’ + ‘margin-top’ + ‘border-top-width’ + ‘padding-top’ + height + ‘padding-bottom’ + ‘border-bottom-width’ + ‘margin-bottom’+ ‘bottom’ = height of containing block</p><p>具体的计算方法：<br>    1)    如果 ‘top’ ‘height’ ‘bottom’ 都是auto：<br>    ⁃    【注意：top 和 height 和 bottom的initial value都是auto】<br>    ⁃    无论margin是什么值，都吧 ‘top’ 设置成其在static position的值，然后继续执行rule3</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-大前提&quot;&gt;&lt;a href=&quot;#1-大前提&quot; class=&quot;headerlink&quot; title=&quot;1. 大前提&quot;&gt;&lt;/a&gt;1. 大前提&lt;/h3&gt;&lt;p&gt;我们有一个两个block containers, 父子元素的关系，然后我想让子block container的位置垂直居中。可以有的思路是：inline-block || table cell 和 vertical-align 连用， flex, abosulte布局.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="webDev" scheme="http://rachelqiu.com/categories/webDev/"/>
+    
+      <category term="CSS" scheme="http://rachelqiu.com/categories/webDev/CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://rachelqiu.com/tags/CSS/"/>
+    
+      <category term="web" scheme="http://rachelqiu.com/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://rachelqiu.com/2017/09/02/hello-world/"/>
+    <id>http://rachelqiu.com/2017/09/02/hello-world/</id>
+    <published>2017-09-02T13:14:19.000Z</published>
+    <updated>2018-01-11T05:30:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div><div class="line">$ hexo server</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> sum = <span class="number">1</span>; <span class="comment">// do not do this</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> x+y;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bool = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
