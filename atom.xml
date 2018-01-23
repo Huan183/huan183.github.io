@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rachelqiu.com/"/>
-  <updated>2018-01-18T16:51:16.000Z</updated>
+  <updated>2018-01-23T07:01:47.000Z</updated>
   <id>http://rachelqiu.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>the second post</title>
+    <link href="http://rachelqiu.com/2018/01/23/the-second-post/"/>
+    <id>http://rachelqiu.com/2018/01/23/the-second-post/</id>
+    <published>2018-01-23T07:00:25.000Z</published>
+    <updated>2018-01-23T07:01:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2008年5月12日，河南省平顶山矿工路市消防支队对面发生一起车祸，伤者宋小玲（化名）在路上步行时被由东向西行驶的肇事车刮撞后倒地受伤（后因抢救无效死亡）。<br><a id="more"></a><br>肇事车向西逃逸。后经调查，交警找到了疑似肇事的蓝色面包车。</p><p>2008年8月26日，河南金剑司法鉴定中心出具的报告显示“不排除面包车与死者相接触”。但由于证据不足，疑似肇事车辆被扣押一周后即被放走。同样的物证被送检至公安部，却未发现“可供检验附着物”。</p><p>死者宋小玲的女儿齐霞（化名）说，母亲的离世很奇怪，曾有神秘人想出160万让她不再继续追查此事，但被其拒绝。为此，齐霞坚持替母寻凶已近10年，为何如此坚持？齐霞对微信公众号“大白新闻”（ID：dabaixinwen）说“我想要的，只是一个真相”。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2008年5月12日，河南省平顶山矿工路市消防支队对面发生一起车祸，伤者宋小玲（化名）在路上步行时被由东向西行驶的肇事车刮撞后倒地受伤（后因抢救无效死亡）。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>日本語テスト</title>
